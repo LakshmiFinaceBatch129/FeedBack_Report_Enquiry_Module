@@ -1,0 +1,114 @@
+<div class="shubham">
+  <h1>Technical Caller Head</h1>
+</div>
+<div class="container w-50">
+  <h1>Do costomer enquiry here</h1>
+<form [formGroup]="equiryform" (ngSubmit)="formSubmit()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">name</label>
+      <input type="email" class="form-control" formControlName="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your name with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">panno</label>
+      <input type="text" class="form-control" formControlName="panno" id="exampleInputPassword1">
+      <div id="emailHelp" class="form-text">We'll never share your panno with anyone else.</div>
+
+    </div>
+    <!-- <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+  <div><hr></div>
+  <div class="he"><h1>customer's loan details</h1></div>
+<div align="center">
+  
+  <td><button class="btn btn-primary" (click)="defaulter(b)">Defaulter</button></td>
+  <td><button (click)="good(b)" class="btn btn-danger">Good</button></td>
+  <td><button (click)="pending(b)" class="btn btn-light">Pending</button></td>
+<table class="table">
+
+    <thead>
+      <tr>
+        <th scope="col">pid</th>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">panno</th>
+        <th scope="col">addr</th>
+        <th scope="col">mono</th>
+        <th scope="col">status</th>
+        <th scope="col">existingloanid</th>
+        <th scope="col">nameofBank</th>
+        <th scope="col">amountOfLoan</th>
+        <th scope="col">outstatndingAmount</th>
+        <th scope="col">repaymentPlan</th>
+    <!-- </tr>
+    <tr> -->
+        <th scope="col">bankid</th>
+        <th scope="col">bankName</th>
+        <th scope="col">branchName</th>
+        <th scope="col">ifcsNo</th>
+        <th scope="col">accountType</th>
+        <th scope="col">accountNO</th>
+        <th scope="col">sinceWhen</th>
+        <th scope="col">averageCreditBalance</th>
+        <th scope="col">loansanid</th>
+        <th scope="col">amount</th>
+        <th scope="col">loansanctiondate</th>
+       <th scope="col">instid</th>
+        <th scope="col">installements</th>
+        <th scope="col">installmentamount</th>
+        <th scope="col">pendinginstallments</th>
+        
+
+ 
+
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+
+        <th scope="row">{{b.per.pid}}</th>
+        <td>{{b.per.name}}</td>
+        <td>{{b.per.email}}</td>
+        <td>{{b.per.panno}}</td>
+        <td>{{b.per.addr}}</td>
+        <td>{{b.per.mono}}</td>
+        <td style="background-color: fuchsia;">{{b.per.status}}</td>
+        <td>{{b.per.existingloan.existingloanid}}</td>
+        <td>{{b.per.existingloan.nameofBank}}</td>
+        <td>{{b.per.existingloan.amountOfLoan}}</td>
+        <td>{{b.per.existingloan.outstatndingAmount}}</td>
+        <td>{{b.per.existingloan.repaymentPlan}}</td>
+    <!-- </tr>
+    <tr *ngFor="let b of list"> -->
+        <td>{{b.per.bankdetails.bankid}}</td>
+        <td>{{b.per.bankdetails.bankName}}</td>
+        <td>{{b.per.bankdetails.branchName}}</td>
+        <td>{{b.per.bankdetails.ifcsNo}}</td>
+        <td>{{b.per.bankdetails.accountType}}</td>
+        <td>{{b.per.bankdetails.accountNO}}</td>
+        <td>{{b.per.bankdetails.sinceWhen}}</td>
+        <td>{{b.per.bankdetails.averageCreditBalance}}</td>
+        <td>{{b.per.loansanction.loansanid}}</td>
+        <td>{{b.per.loansanction.amount}}</td>
+        <td>{{b.per.loansanction.loansanctiondate}}</td>
+      
+        <td>{{b.per.installements.instid}}</td>
+        <td>{{b.per.installements.installements}}</td>
+        <td>{{b.per.installements.installmentamount}}</td>
+        <td>{{b.per.installements.pendinginstallments}}</td>
+        <td>{{b.per.installements.pendinginstallmentamount}}</td>
+        
+
+      </tr>
+      
+    </tbody>
+  </table>
+
+</div>
